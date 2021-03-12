@@ -100,6 +100,19 @@ public class files {
         catch (IOException e){
             System.out.println("Error");
         }
+        try {
+            File file = new File("./src/"+ (nazwa) + "/cars.txt");
+
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            PrintWriter pw = new PrintWriter(file);
+            pw.println("Brak");
+            pw.close();
+        }
+        catch (IOException e){
+            System.out.println("Error");
+        }
     }
 
     //Sprawdza czy istnieje podany przez użytkownika login i hasło
