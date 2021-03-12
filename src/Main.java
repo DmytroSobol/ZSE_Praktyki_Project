@@ -1,6 +1,19 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+/*
+                                    Projekt na praktyki
+
+            Project jest zrobiony jako coś podobnego do "Systemu banku".
+    Może mieć nieskończenie wiele użytkowników i dla każdego jest tworzony swój folder.
+
+    Funkcje:
+    - stan konta
+    - wpłata i wypłata
+    - doładowanie telefonu
+    - wyświetla i zmienia informacje o użytkowniku
+ */
+
 public class Main {
 
     //Działa jako pętla
