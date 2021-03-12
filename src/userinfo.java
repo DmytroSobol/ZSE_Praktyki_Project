@@ -200,4 +200,40 @@ public class userinfo {
 
         return text;
     }
+
+    //Informacja o samochodach
+    public static void setCar(String car){
+        String nazwa = login.nazwa;
+        File file = new File("./src/"+ (nazwa) + "/cars.txt");
+        file.delete();
+
+        try {
+
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            PrintWriter pw = new PrintWriter(file);
+            pw.println(car);
+            pw.close();
+        }
+
+        catch (IOException e){
+            System.out.println("Error");
+        }
+    }
+
+    public static String getCar() throws IOException {
+        String nazwa = login.nazwa;
+        File file;
+        file = new File("./src/" + nazwa + "/cars.txt");
+
+        BufferedReader br;
+        br = new BufferedReader( new FileReader(file));
+
+        String car;
+        while ((car = br.readLine()) != null){
+            System.out.println(car);
+        }
+        return "";
+    }
 }
