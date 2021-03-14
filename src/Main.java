@@ -11,7 +11,9 @@ import java.util.Scanner;
     - stan konta
     - wpłata i wypłata
     - doładowanie telefonu
+    - kupienie samochodu
     - wyświetla i zmienia informacje o użytkowniku
+    - zmiana hasła
  */
 
 public class Main {

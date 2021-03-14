@@ -59,6 +59,7 @@ public class login {
             }
 
             if(Log){
+                Main.status = 1;
                 functions.FunkcjeList();
             }
             else {

@@ -12,14 +12,16 @@ public class functions {
         new settings();
 
         System.out.println("\n\n Lista dostępnych funkcji:");
-        String tab[] = new String[7];
+        String tab[] = new String[9];
         tab[0] = "1. Stan konta";
         tab[1] = "2. Wpłata na konto";
         tab[2] = "3. Wypłata z konta";
         tab[3] = "4. Doładowanie telefonu";
-        tab[4] = "5. Ustawienia";
-        tab[5] = "6. Zmiana hasła";
-        tab[6] = "7. Wyloguj";
+        tab[4] = "5. Kupienie samochodu";
+        tab[5] = "6. Kółko i krzyżyk";
+        tab[6] = "7. Ustawienia";
+        tab[7] = "8. Zmiana hasła";
+        tab[8] = "9. Wyloguj";
 
         for (int i = 0; i < tab.length; i++) {
             System.out.println(tab[i]);
@@ -43,12 +45,20 @@ public class functions {
                 doladowanie();
                 break;
             case 5:
-                settings.settings(login.nazwa);
+                cars.carList();
+                Main.status = 1;
                 break;
             case 6:
-                userinfo.setPass(login.nazwa);
+                KolkoIKrzyzyk.main();
+                Main.status = 1;
                 break;
             case 7:
+                settings.settings(login.nazwa);
+                break;
+            case 8:
+                userinfo.setPass(login.nazwa);
+                break;
+            case 9:
                 Main.status = 0;
                 Main.logout();
                 break;
